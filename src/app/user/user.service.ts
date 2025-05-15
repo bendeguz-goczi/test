@@ -1,6 +1,6 @@
-import {Injectable, OnInit} from '@angular/core';
+import { Injectable} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {BehaviorSubject, filter, Observable, Subject, take} from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 export interface User {
   id?: number,

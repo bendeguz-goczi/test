@@ -1,4 +1,4 @@
-import {Directive, Input, OnChanges, SimpleChanges, TemplateRef, ViewContainerRef} from '@angular/core';
+import { Directive, Input, OnChanges, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
   selector: '[filterByDomain]'

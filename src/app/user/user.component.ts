@@ -30,18 +30,16 @@ import {FormsModule} from '@angular/forms';
     <button [title]="addUserText" (click)="addUser()">Add user</button>
   `,
 })
-export class UserComponent implements OnInit {
+export class UserComponent {
   users$: Observable<User[]> = new Observable();
   domainFilter = '';
   addUserText = 'Click here to add a new user';
 
-  constructor(private userService: UserService) {}
-
-  ngOnInit() {
+  constructor(private userService: UserService) {
     this.users$ = this.userService.getUsers();
   }
 
   addUser(): void {
-    this.userService.createUser({name: 'New User', email: 'email@test.com'});
+    this.userService.createUser({id: 100, name: 'New User', email: 'email@test.com'});
   }
 }

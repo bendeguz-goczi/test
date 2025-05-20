@@ -12,7 +12,7 @@ export class FilterByDomainDirective implements OnChanges{
   ngOnChanges() {
     this.viewContainer.clear();
 
-    if (!this.domain || this.email.split('@')[1] === this.domain) {
+    if (!this.domain || this.email.split('@')[1] == this.domain) {
       this.viewContainer.createEmbeddedView(this.templateRef);
     }
   }

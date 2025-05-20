@@ -23,10 +23,6 @@ export class UserService {
   }
 
   createUser(user: User): void {
-    const users = [...this.users.value];
-    const id = users.length > 0 ? Math.max(...users.map(u => u.id!)) + 1 : 1;
-    const newUser = { ...user, id };
-    users.push(newUser);
-    this.users.next(users);
+    this.users.next([...this.users.value, user]);
   }
 }
